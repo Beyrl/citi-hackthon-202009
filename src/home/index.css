@@ -1,0 +1,142 @@
+*{
+    margin:0; padding:0;
+    }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin: 0; padding: 0;  font-family: "微软雅黑"; }
+fieldset, img { border: 0; }
+ul, ol, li { list-style: none; font-family:'Microsoft YaHei'; }
+
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width:100%;
+    height:100%;
+    background: url(../../assets/css/1.jpg) no-repeat;
+    background-size: cover;
+    /* background: linear-gradient(45deg,rgba(254,172,94,0.5),rgba(199,121,208,0.5),rgba(75,192,200,0.5)) */
+}
+.wrapper{
+    width:100%;
+    height:100%;
+    background: linear-gradient(45deg,rgba(254,172,94,0.5),rgba(199,121,208,0.5),rgba(75,192,200,0.5))
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height:50px;
+    background-color: rgba(0,0,0,0.1);
+
+}
+.left{
+    display: flex;
+}
+.leftLogo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:250px;
+    background-color: rgba(0, 0, 0 ,0.05);
+}
+.leftLogo .logo{
+    width:85px;
+    height:50px;
+    background: url(../../assets/css/logo.jpeg) no-repeat;
+    background-size: cover;
+}
+.leftLogo .title{
+    font-size:26px;
+    color:#fff;
+}
+.leftLogo .icon{
+    width:30px;
+    height:30px;
+    background: url(../../assets/css/catagory.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.centerSearch{
+    display: flex;
+    align-items: center;
+}
+.centerSearch .searchIcon{
+    margin:0 10px;
+    width:20px;
+    height:20px;
+    background: url(../../assets/css/search.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.centerSearch .searchBox{
+    width: 200px;
+    border-bottom: 1px solid #716f6f;
+    height: 30px;
+}
+.centerSearch input{
+    border: none;
+    background: transparent;
+    width:100%;
+    height: 100%;
+    outline: none;
+}
+.rightUser {
+    display: flex;
+    align-items: center;
+}
+.rightUser .userBell{
+    display: flex;
+    align-items: center;
+    height:35px;
+    padding:0 8px;
+    border-right: 1px solid #716f6f;
+}
+.rightUser .userBell .bell{
+    margin:0 5px;
+    width:23px;
+    height:23px;
+    background: url(../../assets/css/bell.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.rightUser .userBell .bellNum{
+    color: #fff;
+    font-size: 10px;
+    padding: 3px 5px;
+    background-color: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    border-radius: 4px;
+}
+.rightUser .userMenu{
+    padding:0 10px;
+    display: flex;
+    align-items: center;
+    color:#fff;
+    border-right: 1px solid #716f6f;
+}
+.rightUser .userMenu .userProfile{
+    margin-right:10px;
+    width:35px;
+    height:35px;
+    background:url(../../assets/css/20430026.jpeg) no-repeat;
+    background-size: cover;
+}
+.rightUser .userMenu .arrow{
+    margin-left:10px;
+    width:15px;
+    height:15px;
+    background:url(../../assets/css/arrow-down.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.rightUser .themeSet{
+    padding:0 10px;
+}
+.rightUser .themeSet .icon{
+    width:25px;
+    height:25px;
+    background:url(../../assets/css/theme.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
