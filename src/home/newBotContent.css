@@ -1,0 +1,84 @@
+.content .contentWrapper .newBotContent .newBotContentBox{
+    display:flex;
+    justify-content: space-between;
+    margin-top:20px;
+}
+.personalBasicInfo,.botBasicInfo{
+    width:44%;
+    border-radius:4px;
+    overflow-y: scroll;
+}
+.newBotContentTitle{
+    font-size: 32px;
+    color:#fff;
+}
+.personalBasicInfo{
+    color:#fff;
+    padding:20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.botBasicInfo{
+    color:#636161;
+    padding:20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.personalBasicInfo p,
+.botBasicInfo p{
+    font-size:28px;
+    margin-bottom:30px;
+}
+.personalBasicInfo .inputBox,
+.botBasicInfo .inputBox{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:5px 10px;
+}
+.personalBasicInfo .inputBox input,
+.botBasicInfo .inputBox input
+{
+    padding:0 10px;
+    width:65%;
+    height:35px;
+    outline: none;
+    margin-left:50px;
+    border:none;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    line-height: 20px;
+    border-radius: 4px;
+}
+.personalBasicInfo .inputBox input{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+}
+.botBasicInfo .inputBox input{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.personalBasicInfo .inputBox textarea,
+.botBasicInfo .inputBox textarea
+{
+    padding:0 10px;
+    width:65%;
+    outline: none;
+    margin-left:50px;
+    border:none;  
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    line-height: 20px;
+    border-radius: 4px;
+}
+
+.personalBasicInfo .inputBox textarea
+{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+}
+.botBasicInfo .inputBox textarea
+{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #636161;
+}

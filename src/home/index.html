@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
     <link type="text/css" rel="styleSheet"  href="index.css" />
+    <link type="text/css" rel="styleSheet"  href="../../assets/style/common.css" />
+    <link type="text/css" rel="styleSheet"  href="newBotContent.css" />
+    <link type="text/css" rel="styleSheet"  href="botSettingContent.css" />
 </head>
-<body>
+<body id="body" class="nebula">
     <div class="wrapper">
         <div class="header">
             <div class="left">
@@ -33,12 +36,123 @@
                     <i class="arrow"></i>
                 </div>
                 <div class="themeSet">
-                    <div class="icon"></div>
+                    <div class="icon" id="setTheme"></div>
+                    <ul class="themeDrop fcDefault" id="themeDrop">
+                        <li class="dropItem" data-name="sunset">Sunset</li>
+                        <li class="dropItem" data-name="nebula">Nebula</li>
+                        <li class="dropItem" data-name="default">Default</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="content"></div>
+        <div class="content">
+            <ul id ="contentMenu" class="contentMenu"></ul>
+            <div id = "contentWrapper" class="contentWrapper">
+                <div class="contentBox newBotContent hide show">
+                    <h2 class="newBotContentTitle">
+                        New Bot
+                    </h2>
+                    <div class="newBotContentBox">
+                        <div class="personalBasicInfo">
+                            <p>Applicant Infomation</p>
+                            <div class="inputBox">
+                                <span>Name</span>
+                                <input type="text" >
+                            </div>
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="text" >
+                            </div>
+                            <div class="inputBox">
+                                <span>Department</span>
+                                <input type="text" >
+                            </div>
+                            <div class="inputBox">
+                                <span>Reason</span>
+                                <textarea name="" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="botBasicInfo">
+                            <p>Bot Infomation</p>
+                            <div class="inputBox">
+                                <span>Bot Name</span>
+                                <input type="text" >
+                            </div>
+                            <div class="inputBox">
+                                <span>Department</span>
+                                <input type="text" >
+                            </div>
+                            <div class="inputBox">
+                                <span>Department</span>
+                                <input type="text" >
+                            </div>
+                            <div class="inputBox">
+                                <span>Description</span>
+                                <textarea name="" rows="5"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentBox hide">
+                    <h2 class="botSettingTitle">
+                         Bot Setting
+                    </h2>
+                    <div class="botSettingContentBox">
+                        <div class="botSettingLeft">
+                            <div class="panel panela">
+                                <p>Basic Infomation</p>
+                                <div class="panelItem">
+                                    <span class="title">Bot ID</span>
+                                    <div class="value">20200910</div>
+                                </div>
+                                <div class="panelItem">
+                                    <span class="title">Bot Name</span>
+                                    <div class="value">hahaBot</div>
+                                </div>
+                                <div class="panelItem">
+                                    <span class="title">Bot Status</span>
+                                    <div class="value">Unrelease</div>
+                                </div>
+                                <div class="panelItem">
+                                    <span class="title">Update Time</span>
+                                    <div class="value">2020-09-12 16:32:51</div>
+                                </div>
+                                <div class="panelItem">
+                                    <span class="title">Create Time</span>
+                                    <div class="value">22020-09-12 16:32:51</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="botSettingRight">
+                            <div class="panel panelb">
+                                <p>AChat</p>
+                                <div class="chatBox">
+                                    <span>Start charting</span>
+                                    <div class="startBtn">
+                                        <div></div>
+                                        <p class="f12">After opening, the robot can chat with users everyday without configuring semantic model</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panelc">
+                                <p>Fallback</p>
+                                <h6 class="f12 m0">  It is suggested that the number of characters should not exceed 200</h6>
+                                <div class="fallbackBox">
+                                    <span class="f12">Fallback</span>
+                                    <div class="fallBackInp">
+                                       <input type="text">
+                                       <i class="edit"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentBox hide">3</div>
+            </div>
+        </div>
         <div class="footer"></div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
