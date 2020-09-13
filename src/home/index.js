@@ -57,7 +57,7 @@ window.onload=function(){
             <th align="left"  width="20%">${item.status}</th>
             <th align="left"  width="25%">${item.aTime}</th>
             <th align="left"  width="25%">${item.bTime}</th>
-            <th align="left"  width="10%"><div class="button greenBg" onclick="aEditTable()" data-id="${item.id}">edit</div></th>
+            <th align="left"  width="10%"><div class="button blueBg" onclick="aEditTable()" data-id="${item.id}">Edit</div></th>
           </tr>`
         })
         
@@ -79,6 +79,12 @@ window.onload=function(){
     aEditTable = function(){
         console.log(event.target.dataset.id);
         clickMenuLeft(1)
+    }
+    AddBotInMask = function(){
+        console.log(0);
+        let newBotName = $('.aMaskInp').val();
+        if(!newBotName){return}
+        $('#mask').slideUp();
     }
 
     function setTheme(){
@@ -114,6 +120,5 @@ window.onload=function(){
      }
      function addBot(){
         $('#mask').slideDown();
-        //document.getElementById('mask').classList.remove('hide')
      } 
 }
