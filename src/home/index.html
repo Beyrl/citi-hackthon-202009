@@ -97,7 +97,7 @@
                     <h2 class="botSettingTitle">
                          Bot Setting
                     </h2>
-                    <div class="botSettingContentBox">
+                    <div class="botSettingContentBox" id="botSettingContentBox">
                         <div class="botSettingLeft">
                             <div class="panel panela">
                                 <p>Basic Infomation</p>
@@ -107,7 +107,13 @@
                                 </div>
                                 <div class="panelItem">
                                     <span class="title">Bot Name</span>
-                                    <div class="value">hahaBot</div>
+                                    <div class="value">
+                                        <div class="inpBox">
+                                            <input class="inpSet" type="text" onblur="inpBlur()">
+                                            <div class="inpMask">hahaBot</div>
+                                        </div>
+                                        <i class="edit" id="editName" onclick="editName()"></i>
+                                    </div>
                                 </div>
                                 <div class="panelItem">
                                     <span class="title">Bot Status</span>
@@ -139,9 +145,12 @@
                                 <h6 class="f12 m0">  It is suggested that the number of characters should not exceed 200</h6>
                                 <div class="fallbackBox">
                                     <span class="f12">Fallback</span>
-                                    <div class="fallBackInp">
-                                       <input type="text">
-                                       <i class="edit"></i>
+                                    <div class="value">
+                                        <div class="inpBox">
+                                            <input class="inpSet" type="text" onblur="inpBlur()">
+                                            <div class="inpMask">hahaBot</div>
+                                        </div>
+                                        <i class="edit" id="editName" onclick="editName()"></i>
                                     </div>
                                 </div>
                             </div>

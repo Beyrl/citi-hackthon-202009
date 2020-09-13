@@ -248,6 +248,13 @@ body{
     background-size: cover;
     cursor: pointer;
 }
+.content .contentMenu .menuLi .bg1 .ques{
+    width:25px;
+    height:25px;
+    background:url(../../assets/css/ques.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
 
 .menuLi{  position:relative; padding:10px 28px;}
 .menuLi:hover{ color:#fff;}
