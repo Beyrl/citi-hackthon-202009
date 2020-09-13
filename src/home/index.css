@@ -170,6 +170,7 @@ body{
     cursor: pointer;
 }
 .rightUser .themeSet .themeDrop{
+    display:none;
     position: absolute;
     top: 45px;
     left: -52px;

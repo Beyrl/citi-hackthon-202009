@@ -3,17 +3,39 @@ window.onload=function(){
         {title:'New Bot',iconClass:'newBot'},
         {title:'Bot Set',iconClass:'botSet'},
         {title:'Ques and Ans',iconClass:'ques'},
+    ],
+    homeList = [
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
+        {id:'98980dsfs',name:'hahaBot',status:"Not Release",aTime:'2020-09-12 16:32:51',bTime:'2020-09-12 16:32:51'},
     ];
     document.getElementById('setTheme').addEventListener('click',showThemeDrop)
     document.getElementById('themeDrop').addEventListener('click',chooseTheme)
+    document.getElementById('setTheme').addEventListener('click',setTheme)
+    document.getElementById('aNewBotBtn').addEventListener('click',addBot)
 
-    initPage();
+    initLeftMenu();
+    initHomeList();
 
 
-    function initPage(){
+    function initLeftMenu(){
         let listHtml = '';
         menuLeftList.forEach((item,index)=>{
-            listHtml += `<li class="menuLi" data-id="${index}" onclick=clickMenuLeft()>
+            listHtml += `<li class="menuLi li${index}" data-id="${index}" onclick=clickMenuLeft()>
                             <div class="bg1">
                                 <i class="menuIcon ${item.iconClass}" ></i>
                                 <span class="title" >${item.title}</span>
@@ -26,8 +48,25 @@ window.onload=function(){
         listContent.innerHTML = listHtml;
     }
 
-    function showThemeDrop(){
+    function initHomeList(){
+        let listHtml = '';
+        homeList.forEach((item,index)=>{
+            listHtml += `<tr class="tableLine">
+            <th align="left"  width="10%">${item.id}</th>
+            <th align="left"  width="10%">${item.name}</th>
+            <th align="left"  width="20%">${item.status}</th>
+            <th align="left"  width="25%">${item.aTime}</th>
+            <th align="left"  width="25%">${item.bTime}</th>
+            <th align="left"  width="10%"><div class="button greenBg" onclick="aEditTable()" data-id="${item.id}">edit</div></th>
+          </tr>`
+        })
+        
+        const listContent = document.getElementById('aTableBodyList');
+        listContent.innerHTML = listHtml;
+    }
 
+    function showThemeDrop(){
+        $('#themeDrop').slideToggle();
     }
 
     editName= function (e){
@@ -37,10 +76,20 @@ window.onload=function(){
         event.target.previousElementSibling.firstElementChild.focus();
     }
 
+    aEditTable = function(){
+        console.log(event.target.dataset.id);
+        clickMenuLeft(1)
+    }
+
+    function setTheme(){
+
+    }
+
     function chooseTheme(e){
         console.log(e)
         let curTheme = e.target.dataset.name;
-        document.getElementById('body').setAttribute("class",curTheme ) 
+        document.getElementById('body').setAttribute("class",curTheme ) ;
+        $('#themeDrop').slideUp();
     }
 
     inpBlur =function (){
@@ -50,8 +99,8 @@ window.onload=function(){
         event.target.nextElementSibling.innerHTML = event.target.value;
     }
 
-    clickMenuLeft = function (){
-        let curId = event.target.dataset.id;
+    clickMenuLeft = function (id){
+        let curId = id ? id : event.target.dataset.id;
         console.log(event)
         Array.from(document.getElementsByClassName('contentBox')).forEach((s,idx)=>{
             s.classList.remove('show');
@@ -59,5 +108,12 @@ window.onload=function(){
                 s.classList.add('show');
             }
         });
-     }  
+     } 
+     cancelMask=function (){
+        $('#mask').slideUp();
+     }
+     function addBot(){
+        $('#mask').slideDown();
+        //document.getElementById('mask').classList.remove('hide')
+     } 
 }

@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
     <link type="text/css" rel="styleSheet"  href="index.css" />
     <link type="text/css" rel="styleSheet"  href="../../assets/style/common.css" />
     <link type="text/css" rel="styleSheet"  href="newBotContent.css" />
     <link type="text/css" rel="styleSheet"  href="botSettingContent.css" />
 </head>
-<body id="body" class="nebula">
+<body id="body" class="sunset">
     <div class="wrapper">
         <div class="header">
             <div class="left">
@@ -49,10 +50,33 @@
             <ul id ="contentMenu" class="contentMenu"></ul>
             <div id = "contentWrapper" class="contentWrapper">
                 <div class="contentBox newBotContent hide show">
-                    <h2 class="newBotContentTitle">
-                        New Bot
-                    </h2>
-                    <div class="newBotContentBox">
+                    <div class="addBotContentBox">
+                        <div class="aTitle">
+                            <h2 class="newBotContentTitle">
+                                New Bot
+                            </h2>
+                            <div class="aNewBotBtn" id="aNewBotBtn">Add Bot</div>
+                        </div>
+                        <div class="aTable">
+                            <table class="tableWrapper" width="100%">
+                                <thead width="100%">
+                                    <tr class="tableHeader">
+                                        <th align="left" width="10%">ID</th>
+                                        <th align="left" width="10%">NAME</th>
+                                        <th align="left" width="20%">STATUS</th>
+                                        <th align="left" width="25%">UPDATE TIME</th>
+                                        <th align="left" width="25%">CREATE TIME</th>
+                                        <th align="left" width="10%">EDIT</th>
+                                      </tr>
+                                </thead>
+                                <tbody class="aTableBodyList" id="aTableBodyList" width="100%">
+                                </tbody>
+                                
+                              </table>
+                        </div>
+                        
+                    </div>
+                    <!-- <div class="newBotContentBox">
                         <div class="personalBasicInfo">
                             <p>Applicant Infomation</p>
                             <div class="inputBox">
@@ -91,7 +115,7 @@
                                 <textarea name="" rows="5"></textarea>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="contentBox hide">
                     <h2 class="botSettingTitle">
@@ -158,6 +182,20 @@
                     </div>
                 </div>
                 <div class="contentBox hide">3</div>
+                <div class="mask" id="mask">
+                    <div class="addBox">
+                        <h3>Add Bot</h3>
+                        <p class="brief">BOT identification name is a combination of letters, numbers and underscores, 1-32 bits, such as: rail_ travel。 Once the BOT identity name is determined, it cannot be modified.</p>
+                        <div class="aMaskInpBox">
+                            <span>Bot Name</span>
+                            <input type="text" >
+                        </div>
+                        <div class="aMaskButton">
+                            <div class="button blueBg mr20">Add</div>
+                            <div class="button whiteBg" onclick="cancelMask()">Cancel</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="footer"></div>
